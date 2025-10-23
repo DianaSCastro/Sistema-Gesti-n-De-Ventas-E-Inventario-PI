@@ -1,0 +1,31 @@
+# Archivos temporales de Visual Studio
+.vs/
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+
+# Compilaciones
+bin/
+obj/
+Debug/
+Release/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Archivos de configuración generados
+*.config
+
+# Archivos de Copilot y bases de datos locales
+*.db
+*.vsidx
+*.db-shm
+*.db-wal
+
+# Carpetas del sistema
+Thumbs.db
+ehthumbs.db
