@@ -157,6 +157,7 @@
     <Compile Include="CN_Cliente.cs" />
     <Compile Include="CN_Empleado.cs" />
     <Compile Include="CN_RegistrarP.cs" />
+    <Compile Include="CN_ReporteVentas.cs" />
     <Compile Include="CN_RInventario.cs" />
     <Compile Include="CN_TicketVenta.cs" />
     <Compile Include="CN_TipoRol.cs" />

@@ -34,23 +34,24 @@
             this.panel_submenu = new System.Windows.Forms.Panel();
             this.subtn_adminInven = new System.Windows.Forms.Button();
             this.subtn_stock = new System.Windows.Forms.Button();
+            this.picBox_inventario = new System.Windows.Forms.PictureBox();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_cerrarSesion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_MenuUsuario = new System.Windows.Forms.Label();
             this.btn_Ventas = new System.Windows.Forms.Button();
             this.btn_GestClientes = new System.Windows.Forms.Button();
             this.btn_GestEmpleados = new System.Windows.Forms.Button();
             this.btn_GestProductos = new System.Windows.Forms.Button();
             this.panel_conector = new System.Windows.Forms.Panel();
-            this.picBox_inventario = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_Reportes = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_submenu.SuspendLayout();
@@ -92,6 +93,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.btn_Reportes);
             this.panel1.Controls.Add(this.panel_submenu);
             this.panel1.Controls.Add(this.picBox_inventario);
             this.panel1.Controls.Add(this.btn_inventario);
@@ -121,9 +123,9 @@
             this.panel_submenu.BackColor = System.Drawing.Color.LightCoral;
             this.panel_submenu.Controls.Add(this.subtn_adminInven);
             this.panel_submenu.Controls.Add(this.subtn_stock);
-            this.panel_submenu.Location = new System.Drawing.Point(-7, 402);
+            this.panel_submenu.Location = new System.Drawing.Point(-7, 495);
             this.panel_submenu.Name = "panel_submenu";
-            this.panel_submenu.Size = new System.Drawing.Size(245, 107);
+            this.panel_submenu.Size = new System.Drawing.Size(245, 14);
             this.panel_submenu.TabIndex = 24;
             this.panel_submenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_submenu_Paint);
             // 
@@ -134,7 +136,7 @@
             this.subtn_adminInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subtn_adminInven.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtn_adminInven.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.subtn_adminInven.Location = new System.Drawing.Point(7, 46);
+            this.subtn_adminInven.Location = new System.Drawing.Point(7, 64);
             this.subtn_adminInven.Name = "subtn_adminInven";
             this.subtn_adminInven.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
             this.subtn_adminInven.Size = new System.Drawing.Size(230, 40);
@@ -151,7 +153,7 @@
             this.subtn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subtn_stock.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtn_stock.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.subtn_stock.Location = new System.Drawing.Point(7, 0);
+            this.subtn_stock.Location = new System.Drawing.Point(7, 18);
             this.subtn_stock.Name = "subtn_stock";
             this.subtn_stock.Padding = new System.Windows.Forms.Padding(75, 0, 0, 0);
             this.subtn_stock.Size = new System.Drawing.Size(230, 40);
@@ -160,6 +162,18 @@
             this.subtn_stock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.subtn_stock.UseVisualStyleBackColor = true;
             this.subtn_stock.Click += new System.EventHandler(this.subtn_stock_Click);
+            // 
+            // picBox_inventario
+            // 
+            this.picBox_inventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBox_inventario.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_inventario;
+            this.picBox_inventario.Location = new System.Drawing.Point(12, 363);
+            this.picBox_inventario.Name = "picBox_inventario";
+            this.picBox_inventario.Size = new System.Drawing.Size(39, 40);
+            this.picBox_inventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_inventario.TabIndex = 21;
+            this.picBox_inventario.TabStop = false;
+            this.picBox_inventario.Click += new System.EventHandler(this.picBox_inventario_Click);
             // 
             // btn_inventario
             // 
@@ -231,6 +245,66 @@
             this.label1.Size = new System.Drawing.Size(98, 16);
             this.label1.TabIndex = 16;
             this.label1.Text = "ID EMPLEADO:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_menu_administrador;
+            this.pictureBox1.Location = new System.Drawing.Point(71, 57);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_clientess;
+            this.pictureBox6.Location = new System.Drawing.Point(12, 271);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_empleados1;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 225);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_productos;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 317);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_ventas;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 179);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             // 
             // txt_MenuUsuario
             // 
@@ -323,77 +397,22 @@
             this.panel_conector.TabIndex = 2;
             this.panel_conector.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_conector_Paint);
             // 
-            // picBox_inventario
+            // btn_Reportes
             // 
-            this.picBox_inventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox_inventario.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_inventario;
-            this.picBox_inventario.Location = new System.Drawing.Point(12, 363);
-            this.picBox_inventario.Name = "picBox_inventario";
-            this.picBox_inventario.Size = new System.Drawing.Size(39, 40);
-            this.picBox_inventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_inventario.TabIndex = 21;
-            this.picBox_inventario.TabStop = false;
-            this.picBox_inventario.Click += new System.EventHandler(this.picBox_inventario_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_menu_administrador;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_clientess;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 271);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(39, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_empleados1;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 225);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_productos;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 317);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_ventas;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 179);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.btn_Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Reportes.FlatAppearance.BorderSize = 0;
+            this.btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reportes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btn_Reportes.Location = new System.Drawing.Point(0, 409);
+            this.btn_Reportes.Name = "btn_Reportes";
+            this.btn_Reportes.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btn_Reportes.Size = new System.Drawing.Size(230, 40);
+            this.btn_Reportes.TabIndex = 25;
+            this.btn_Reportes.Text = "Reportes de Ventas";
+            this.btn_Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reportes.UseVisualStyleBackColor = true;
+            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // MainForm
             // 
@@ -449,5 +468,6 @@
         private System.Windows.Forms.Button subtn_adminInven;
         private System.Windows.Forms.Button subtn_stock;
         private System.Windows.Forms.Panel panel_submenu;
+        private System.Windows.Forms.Button btn_Reportes;
     }
 }

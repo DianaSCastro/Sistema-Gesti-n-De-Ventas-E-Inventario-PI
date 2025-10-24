@@ -158,6 +158,7 @@
     <Compile Include="CD_Cliente.cs" />
     <Compile Include="CD_Empleado.cs" />
     <Compile Include="CD_RegistrarP.cs" />
+    <Compile Include="CD_ReporteVentas.cs" />
     <Compile Include="CD_RInventario.cs" />
     <Compile Include="CD_TipoRol.cs" />
     <Compile Include="Conexion.cs" />

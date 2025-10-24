@@ -88,6 +88,7 @@ namespace Sistema_Ventas_Inventario_Papeleria
                 btn_inventario.Visible = false;
                 pictureBox3.Visible = false;
                 picBox_inventario.Visible = false;
+                btn_Reportes.Visible = false;   
 
 
             }
@@ -96,6 +97,7 @@ namespace Sistema_Ventas_Inventario_Papeleria
                 // Asegúrate de que todos los módulos estén visibles para el administrador
                 btn_GestEmpleados.Visible = true;
                 btn_GestClientes.Visible = true;
+                btn_Reportes.Visible = true;    
             }
         }
 
@@ -348,6 +350,25 @@ namespace Sistema_Ventas_Inventario_Papeleria
         private void picBox_inventario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Reportes_Click(object sender, EventArgs e)
+        {
+            // Verifica si ya hay un formulario en el panel y lo elimina si es necesario
+            if (panel_conector.Controls.Count > 0)
+                panel_conector.Controls.RemoveAt(0);
+
+            // Crear una instancia del formulario de productos con el rol de usuario
+            VisorReporteV VisorReporteV = new VisorReporteV();
+            VisorReporteV.TopLevel = false;
+            VisorReporteV.Dock = DockStyle.Fill;
+
+            // Agregar el formulario al panel y configurarlo para que se ajuste
+            panel_conector.Controls.Add(VisorReporteV);
+            panel_conector.Tag = VisorReporteV;
+
+            // Mostrar el formulario de productos
+            VisorReporteV.Show();
         }
     }
 }
