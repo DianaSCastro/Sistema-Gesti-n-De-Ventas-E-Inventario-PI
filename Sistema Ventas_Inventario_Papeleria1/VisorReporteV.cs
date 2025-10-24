@@ -16,7 +16,14 @@ namespace Sistema_Ventas_Inventario_Papeleria
 
         private void VisorReporteV_Load(object sender, EventArgs e)
         {
-            reportViewer1.RefreshReport();
+            DateTime inicio = DateTime.Today;
+            DateTime fin = DateTime.Now;
+
+            // Configura el ReportEmbeddedResource aquí una sola vez, si no lo haces en el diseñador
+            // Esto asegura que el ReportViewer sepa qué archivo RDLC usar.
+            reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Ventas_Inventario_Papeleria.Reportes.ReporteVentas.rdlc";
+
+            ObtenerReporteVentas(inicio, fin);
         }
 
         // ✅ Método principal para obtener y mostrar el reporte
@@ -35,7 +42,7 @@ namespace Sistema_Ventas_Inventario_Papeleria
                 }
                     // Limpiamos cualquier DataSource previo
                     reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Ventas_Inventario_Papeleria1.Reportes.ReporteVentas.rdlc";
+                    reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Ventas_Inventario_Papeleria.Reportes.ReporteVentas.rdlc";
 
 
                     ReportDataSource fuente = new ReportDataSource("reporteVentas", lista);
