@@ -30,16 +30,16 @@
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_personalizar = new System.Windows.Forms.Button();
-            this.dateTimePickerFrm = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFrm2 = new System.Windows.Forms.DateTimePicker();
-            this.btm_guardarRV = new System.Windows.Forms.Button();
-            this.label_RV1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_hoy = new System.Windows.Forms.Button();
-            this.btn_7dias = new System.Windows.Forms.Button();
-            this.btn_mes = new System.Windows.Forms.Button();
             this.btn_año = new System.Windows.Forms.Button();
+            this.btn_mes = new System.Windows.Forms.Button();
+            this.btn_7dias = new System.Windows.Forms.Button();
+            this.btn_hoy = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_RV1 = new System.Windows.Forms.Label();
+            this.btm_guardarRV = new System.Windows.Forms.Button();
+            this.dateTimePickerFrm2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFrm = new System.Windows.Forms.DateTimePicker();
+            this.btn_personalizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel1.Controls.Add(this.btn_año);
             this.panel1.Controls.Add(this.btn_mes);
             this.panel1.Controls.Add(this.btn_7dias);
@@ -72,73 +72,53 @@
             this.panel1.Size = new System.Drawing.Size(220, 565);
             this.panel1.TabIndex = 1;
             // 
-            // btn_personalizar
+            // btn_año
             // 
-            this.btn_personalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
-            this.btn_personalizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_personalizar.FlatAppearance.BorderSize = 0;
-            this.btn_personalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_personalizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_personalizar.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_personalizar.Location = new System.Drawing.Point(27, 253);
-            this.btn_personalizar.Name = "btn_personalizar";
-            this.btn_personalizar.Size = new System.Drawing.Size(172, 35);
-            this.btn_personalizar.TabIndex = 44;
-            this.btn_personalizar.Text = "Personalizar Fecha";
-            this.btn_personalizar.UseVisualStyleBackColor = false;
+            this.btn_año.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.btn_año.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_año.FlatAppearance.BorderSize = 0;
+            this.btn_año.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_año.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_año.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btn_año.Location = new System.Drawing.Point(27, 195);
+            this.btn_año.Name = "btn_año";
+            this.btn_año.Size = new System.Drawing.Size(172, 35);
+            this.btn_año.TabIndex = 51;
+            this.btn_año.Text = "Este año";
+            this.btn_año.UseVisualStyleBackColor = false;
+            this.btn_año.Click += new System.EventHandler(this.btn_año_Click_1);
             // 
-            // dateTimePickerFrm
+            // btn_mes
             // 
-            this.dateTimePickerFrm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrm.Location = new System.Drawing.Point(88, 312);
-            this.dateTimePickerFrm.Name = "dateTimePickerFrm";
-            this.dateTimePickerFrm.Size = new System.Drawing.Size(111, 20);
-            this.dateTimePickerFrm.TabIndex = 2;
+            this.btn_mes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.btn_mes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_mes.FlatAppearance.BorderSize = 0;
+            this.btn_mes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mes.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btn_mes.Location = new System.Drawing.Point(27, 137);
+            this.btn_mes.Name = "btn_mes";
+            this.btn_mes.Size = new System.Drawing.Size(172, 35);
+            this.btn_mes.TabIndex = 50;
+            this.btn_mes.Text = "Este mes";
+            this.btn_mes.UseVisualStyleBackColor = false;
+            this.btn_mes.Click += new System.EventHandler(this.btn_mes_Click_1);
             // 
-            // dateTimePickerFrm2
+            // btn_7dias
             // 
-            this.dateTimePickerFrm2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrm2.Location = new System.Drawing.Point(88, 365);
-            this.dateTimePickerFrm2.Name = "dateTimePickerFrm2";
-            this.dateTimePickerFrm2.Size = new System.Drawing.Size(111, 20);
-            this.dateTimePickerFrm2.TabIndex = 45;
-            // 
-            // btm_guardarRV
-            // 
-            this.btm_guardarRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
-            this.btm_guardarRV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btm_guardarRV.FlatAppearance.BorderSize = 0;
-            this.btm_guardarRV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btm_guardarRV.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btm_guardarRV.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btm_guardarRV.Location = new System.Drawing.Point(27, 405);
-            this.btm_guardarRV.Name = "btm_guardarRV";
-            this.btm_guardarRV.Size = new System.Drawing.Size(172, 35);
-            this.btm_guardarRV.TabIndex = 46;
-            this.btm_guardarRV.Text = "Guardar";
-            this.btm_guardarRV.UseVisualStyleBackColor = false;
-            // 
-            // label_RV1
-            // 
-            this.label_RV1.AutoSize = true;
-            this.label_RV1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_RV1.ForeColor = System.Drawing.Color.White;
-            this.label_RV1.Location = new System.Drawing.Point(38, 316);
-            this.label_RV1.Name = "label_RV1";
-            this.label_RV1.Size = new System.Drawing.Size(29, 16);
-            this.label_RV1.TabIndex = 5;
-            this.label_RV1.Text = "De:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 369);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Hasta:";
+            this.btn_7dias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.btn_7dias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_7dias.FlatAppearance.BorderSize = 0;
+            this.btn_7dias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_7dias.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_7dias.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btn_7dias.Location = new System.Drawing.Point(27, 78);
+            this.btn_7dias.Name = "btn_7dias";
+            this.btn_7dias.Size = new System.Drawing.Size(172, 35);
+            this.btn_7dias.TabIndex = 49;
+            this.btn_7dias.Text = "Últimos 7 días";
+            this.btn_7dias.UseVisualStyleBackColor = false;
+            this.btn_7dias.Click += new System.EventHandler(this.btn_7dias_Click_1);
             // 
             // btn_hoy
             // 
@@ -156,50 +136,75 @@
             this.btn_hoy.UseVisualStyleBackColor = false;
             this.btn_hoy.Click += new System.EventHandler(this.btn_hoy_Click);
             // 
-            // btn_7dias
+            // label1
             // 
-            this.btn_7dias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
-            this.btn_7dias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_7dias.FlatAppearance.BorderSize = 0;
-            this.btn_7dias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_7dias.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_7dias.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_7dias.Location = new System.Drawing.Point(27, 78);
-            this.btn_7dias.Name = "btn_7dias";
-            this.btn_7dias.Size = new System.Drawing.Size(172, 35);
-            this.btn_7dias.TabIndex = 49;
-            this.btn_7dias.Text = "Últimos 7 días";
-            this.btn_7dias.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(32, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Hasta:";
             // 
-            // btn_mes
+            // label_RV1
             // 
-            this.btn_mes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
-            this.btn_mes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_mes.FlatAppearance.BorderSize = 0;
-            this.btn_mes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mes.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_mes.Location = new System.Drawing.Point(27, 137);
-            this.btn_mes.Name = "btn_mes";
-            this.btn_mes.Size = new System.Drawing.Size(172, 35);
-            this.btn_mes.TabIndex = 50;
-            this.btn_mes.Text = "Este mes";
-            this.btn_mes.UseVisualStyleBackColor = false;
+            this.label_RV1.AutoSize = true;
+            this.label_RV1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_RV1.ForeColor = System.Drawing.Color.Black;
+            this.label_RV1.Location = new System.Drawing.Point(38, 316);
+            this.label_RV1.Name = "label_RV1";
+            this.label_RV1.Size = new System.Drawing.Size(29, 16);
+            this.label_RV1.TabIndex = 5;
+            this.label_RV1.Text = "De:";
             // 
-            // btn_año
+            // btm_guardarRV
             // 
-            this.btn_año.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
-            this.btn_año.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_año.FlatAppearance.BorderSize = 0;
-            this.btn_año.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_año.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_año.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_año.Location = new System.Drawing.Point(27, 195);
-            this.btn_año.Name = "btn_año";
-            this.btn_año.Size = new System.Drawing.Size(172, 35);
-            this.btn_año.TabIndex = 51;
-            this.btn_año.Text = "Este año";
-            this.btn_año.UseVisualStyleBackColor = false;
+            this.btm_guardarRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.btm_guardarRV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btm_guardarRV.FlatAppearance.BorderSize = 0;
+            this.btm_guardarRV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btm_guardarRV.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm_guardarRV.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btm_guardarRV.Location = new System.Drawing.Point(27, 405);
+            this.btm_guardarRV.Name = "btm_guardarRV";
+            this.btm_guardarRV.Size = new System.Drawing.Size(172, 35);
+            this.btm_guardarRV.TabIndex = 46;
+            this.btm_guardarRV.Text = "Guardar";
+            this.btm_guardarRV.UseVisualStyleBackColor = false;
+            this.btm_guardarRV.Click += new System.EventHandler(this.btm_guardarRV_Click);
+            // 
+            // dateTimePickerFrm2
+            // 
+            this.dateTimePickerFrm2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrm2.Location = new System.Drawing.Point(88, 365);
+            this.dateTimePickerFrm2.Name = "dateTimePickerFrm2";
+            this.dateTimePickerFrm2.Size = new System.Drawing.Size(111, 20);
+            this.dateTimePickerFrm2.TabIndex = 45;
+            // 
+            // dateTimePickerFrm
+            // 
+            this.dateTimePickerFrm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrm.Location = new System.Drawing.Point(88, 312);
+            this.dateTimePickerFrm.Name = "dateTimePickerFrm";
+            this.dateTimePickerFrm.Size = new System.Drawing.Size(111, 20);
+            this.dateTimePickerFrm.TabIndex = 2;
+            // 
+            // btn_personalizar
+            // 
+            this.btn_personalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.btn_personalizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_personalizar.FlatAppearance.BorderSize = 0;
+            this.btn_personalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_personalizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_personalizar.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btn_personalizar.Location = new System.Drawing.Point(27, 253);
+            this.btn_personalizar.Name = "btn_personalizar";
+            this.btn_personalizar.Size = new System.Drawing.Size(172, 35);
+            this.btn_personalizar.TabIndex = 44;
+            this.btn_personalizar.Text = "Personalizar Fecha";
+            this.btn_personalizar.UseVisualStyleBackColor = false;
+            this.btn_personalizar.Click += new System.EventHandler(this.btn_personalizar_Click_1);
             // 
             // VisorReporteV
             // 

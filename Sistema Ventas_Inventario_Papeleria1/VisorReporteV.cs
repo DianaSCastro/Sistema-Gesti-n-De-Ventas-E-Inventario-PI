@@ -32,7 +32,11 @@ namespace Sistema_Ventas_Inventario_Papeleria
             try
             {
                 CN_ReporteVentas cnReporte = new CN_ReporteVentas();
-                List<ReporteVentas> lista = cnReporte.ObtenerReporteVentas(fechaInicio, fechaFin);
+
+                // ✅ NUEVA VARIABLE: Para recibir el total general
+                decimal totalGeneral;
+
+                List<ReporteVentas> lista = cnReporte.ObtenerReporteVentas(fechaInicio, fechaFin, out totalGeneral);
 
                 if (lista == null || lista.Count == 0)
                 {
@@ -42,21 +46,40 @@ namespace Sistema_Ventas_Inventario_Papeleria
                 }
                     // Limpiamos cualquier DataSource previo
                     reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Ventas_Inventario_Papeleria.Reportes.ReporteVentas.rdlc";
+                //  reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Ventas_Inventario_Papeleria.Reportes.ReporteVentas.rdlc";
 
+                // Asignamos el RDLC de nuevo
+                reportViewer1.LocalReport.ReportEmbeddedResource = "Sistema_Ventas_Inventario_Papeleria.Reportes.ReporteVentas.rdlc";
 
-                    ReportDataSource fuente = new ReportDataSource("reporteVentas", lista);
+                // Inicializar propiedades adicionales para RDLC
+                foreach (var item in lista)
+                {
+                    item.FechaInicioPeriodo = fechaInicio;
+                    item.FechaFinPeriodo = fechaFin;
+                    item.FechaReporte = DateTime.Now;
+
+                    // Si TotalVenta es calculado, asegúrate de asignarlo
+                    if (item.TotalVenta == 0)
+                        item.TotalVenta = item.SubtotalVenta; // Ajusta según tu cálculo real
+                }
+                ReportDataSource fuente = new ReportDataSource("reporteVentas", lista);
 
                    
                     reportViewer1.LocalReport.DataSources.Add(fuente);
+
+                // Formateamos el total general como moneda para el reporte
+                string totalFormateado = totalGeneral.ToString("C");
+
 
                 reportViewer1.RefreshReport();
 
                 ReportParameter[] parametros = new ReportParameter[]
                 {
-                    new ReportParameter("pFechaInicio", fechaInicio.ToShortDateString()),
-                    new ReportParameter("pFechaFin", fechaFin.ToShortDateString()),
-                    new ReportParameter("pFechaGeneracion", DateTime.Now.ToString("dd/MM/yyyy HH:mm"))
+                    new ReportParameter("pFechaInicio", fechaInicio.ToString("dd/MM/yyyy")),
+                    new ReportParameter("pFechaFin", fechaFin.ToString("dd/MM/yyyy")),
+                    new ReportParameter("pFechaGeneracion", DateTime.Now.ToString("dd/MM/yyyy HH:mm")),
+                    // ✅ NUEVO PARÁMETRO: Se pasa el total general como un parámetro de texto
+                    new ReportParameter("pTotalVentasGeneral", totalFormateado)
                 };
                 reportViewer1.LocalReport.SetParameters(parametros);
 
@@ -75,42 +98,39 @@ namespace Sistema_Ventas_Inventario_Papeleria
             DateTime inicio = DateTime.Today;
             DateTime fin = DateTime.Now;
             ObtenerReporteVentas(inicio, fin);
+
+            MessageBox.Show("Botón presionado");
+
         }
 
-        // ✅ Botón últimos 7 días
-        private void btn_7dias_Click(object sender, EventArgs e)
+
+
+
+
+
+
+
+
+        private void btn_personalizar_Click_1(object sender, EventArgs e)
         {
-            DateTime inicio = DateTime.Today.AddDays(-7);
-            DateTime fin = DateTime.Now;
-            ObtenerReporteVentas(inicio, fin);
+            try
+            {
+                // Esta es la parte que podría fallar si los controles no existen o son null
+                DateTime inicio = dateTimePickerFrm.Value.Date;
+                DateTime fin = dateTimePickerFrm2.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+
+                // Si llega aquí, los controles existen. Ahora ejecuta la lógica del reporte.
+                ObtenerReporteVentas(inicio, fin);
+            }
+            catch (Exception ex)
+            {
+                // Esto le mostrará si el problema es de los controles (NullReferenceException)
+                MessageBox.Show("Error en el botón personalizar: " + ex.Message,
+                    "Error de Personalización", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        // ✅ Botón este mes
-        private void btn_mes_Click(object sender, EventArgs e)
-        {
-            DateTime inicio = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-            DateTime fin = DateTime.Now;
-            ObtenerReporteVentas(inicio, fin);
-        }
-
-        // ✅ Botón este año
-        private void btn_año_Click(object sender, EventArgs e)
-        {
-            DateTime inicio = new DateTime(DateTime.Now.Year, 1, 1);
-            DateTime fin = DateTime.Now;
-            ObtenerReporteVentas(inicio, fin);
-        }
-
-        // ✅ Botón personalizado
-        private void btn_personalizar_Click(object sender, EventArgs e)
-        {
-            DateTime inicio = dateTimePickerFrm.Value.Date;
-            DateTime fin = dateTimePickerFrm2.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
-            ObtenerReporteVentas(inicio, fin);
-        }
-
-        // ✅ Botón guardar (si quieres exportar o guardar PDF)
-        private void btn_guardarRV_Click(object sender, EventArgs e)
+        private void btm_guardarRV_Click(object sender, EventArgs e)
         {
             // Ejemplo simple: exportar a PDF
             SaveFileDialog sfd = new SaveFileDialog
@@ -125,6 +145,28 @@ namespace Sistema_Ventas_Inventario_Papeleria
                 System.IO.File.WriteAllBytes(sfd.FileName, bytes);
                 MessageBox.Show("Reporte guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void btn_año_Click_1(object sender, EventArgs e)
+        {
+            DateTime inicio = new DateTime(DateTime.Now.Year, 1, 1);
+            DateTime fin = DateTime.Now;
+            ObtenerReporteVentas(inicio, fin);
+        }
+
+        private void btn_mes_Click_1(object sender, EventArgs e)
+        {
+            DateTime inicio = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            DateTime fin = DateTime.Now;
+            ObtenerReporteVentas(inicio, fin);
+        }
+
+        private void btn_7dias_Click_1(object sender, EventArgs e)
+        {
+            DateTime inicio = DateTime.Today.AddDays(-7);
+            DateTime fin = DateTime.Now;
+            ObtenerReporteVentas(inicio, fin);
         }
     }
 }

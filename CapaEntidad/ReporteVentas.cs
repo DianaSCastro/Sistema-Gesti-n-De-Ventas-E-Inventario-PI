@@ -19,5 +19,7 @@ namespace CapaEntidad
         public DateTime FechaFinPeriodo { get; set; }    // Fecha final del periodo que se está consultando
         public DateTime FechaReporte { get; set; }       // Fecha en la que se genera el reporte
 
+
+        public decimal TotalVenta { get; set; }
     }
 }
