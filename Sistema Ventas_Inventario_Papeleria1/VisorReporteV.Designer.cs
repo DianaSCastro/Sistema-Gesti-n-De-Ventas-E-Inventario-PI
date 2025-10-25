@@ -141,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(32, 369);
+            this.label1.Location = new System.Drawing.Point(32, 325);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 47;
@@ -152,7 +152,7 @@
             this.label_RV1.AutoSize = true;
             this.label_RV1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_RV1.ForeColor = System.Drawing.Color.Black;
-            this.label_RV1.Location = new System.Drawing.Point(38, 316);
+            this.label_RV1.Location = new System.Drawing.Point(38, 272);
             this.label_RV1.Name = "label_RV1";
             this.label_RV1.Size = new System.Drawing.Size(32, 16);
             this.label_RV1.TabIndex = 5;
@@ -166,7 +166,7 @@
             this.btm_guardarRV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btm_guardarRV.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btm_guardarRV.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btm_guardarRV.Location = new System.Drawing.Point(27, 405);
+            this.btm_guardarRV.Location = new System.Drawing.Point(27, 468);
             this.btm_guardarRV.Name = "btm_guardarRV";
             this.btm_guardarRV.Size = new System.Drawing.Size(172, 35);
             this.btm_guardarRV.TabIndex = 46;
@@ -178,7 +178,7 @@
             // dateTimePickerFrm2
             // 
             this.dateTimePickerFrm2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrm2.Location = new System.Drawing.Point(88, 365);
+            this.dateTimePickerFrm2.Location = new System.Drawing.Point(88, 321);
             this.dateTimePickerFrm2.Name = "dateTimePickerFrm2";
             this.dateTimePickerFrm2.Size = new System.Drawing.Size(111, 20);
             this.dateTimePickerFrm2.TabIndex = 45;
@@ -186,7 +186,7 @@
             // dateTimePickerFrm
             // 
             this.dateTimePickerFrm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFrm.Location = new System.Drawing.Point(88, 312);
+            this.dateTimePickerFrm.Location = new System.Drawing.Point(88, 268);
             this.dateTimePickerFrm.Name = "dateTimePickerFrm";
             this.dateTimePickerFrm.Size = new System.Drawing.Size(111, 20);
             this.dateTimePickerFrm.TabIndex = 2;
@@ -199,7 +199,7 @@
             this.btn_personalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_personalizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_personalizar.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_personalizar.Location = new System.Drawing.Point(27, 253);
+            this.btn_personalizar.Location = new System.Drawing.Point(27, 376);
             this.btn_personalizar.Name = "btn_personalizar";
             this.btn_personalizar.Size = new System.Drawing.Size(172, 35);
             this.btn_personalizar.TabIndex = 44;
