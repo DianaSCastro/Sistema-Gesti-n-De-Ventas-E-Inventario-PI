@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
             this.panel1.Controls.Add(this.btn_año);
             this.panel1.Controls.Add(this.btn_mes);
             this.panel1.Controls.Add(this.btn_7dias);
@@ -154,9 +154,9 @@
             this.label_RV1.ForeColor = System.Drawing.Color.Black;
             this.label_RV1.Location = new System.Drawing.Point(38, 316);
             this.label_RV1.Name = "label_RV1";
-            this.label_RV1.Size = new System.Drawing.Size(29, 16);
+            this.label_RV1.Size = new System.Drawing.Size(32, 16);
             this.label_RV1.TabIndex = 5;
-            this.label_RV1.Text = "De:";
+            this.label_RV1.Text = "Del:";
             // 
             // btm_guardarRV
             // 
@@ -172,6 +172,7 @@
             this.btm_guardarRV.TabIndex = 46;
             this.btm_guardarRV.Text = "Guardar";
             this.btm_guardarRV.UseVisualStyleBackColor = false;
+            this.btm_guardarRV.Visible = false;
             this.btm_guardarRV.Click += new System.EventHandler(this.btm_guardarRV_Click);
             // 
             // dateTimePickerFrm2

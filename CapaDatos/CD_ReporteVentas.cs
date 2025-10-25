@@ -17,7 +17,7 @@ namespace CapaDatos
         public List<ReporteVentas> ObtenerReporteVentas(DateTime fechaInicio, DateTime fechaFin)
         {
             List<ReporteVentas> lista = new List<ReporteVentas>();
-            string query = "SELECT * FROM vw_ReporteVentas";
+            string query = "SELECT IdVenta, FechaVenta, NombreEmpleado, ProductosVendidos, SubtotalVenta FROM vw_ReporteVentas WHERE FechaVenta BETWEEN @FechaInicio AND @FechaFin";
 
             try
             {
@@ -26,6 +26,11 @@ namespace CapaDatos
                     oconexion.Open();
                     using (SqlCommand cmd = new SqlCommand(query, oconexion))
                     {
+                        // 2. ✅ CORRECCIÓN: Añadir los parámetros al comando SQL
+                        cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio.Date); // Usar solo la fecha
+                                                                                       // Asegurar que el filtro incluya el final del día:
+                        cmd.Parameters.AddWithValue("@FechaFin", fechaFin.Date.AddDays(1).AddSeconds(-1));
+
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())

@@ -35,8 +35,8 @@ namespace CapaNegocio
                     item.FechaReporte = DateTime.Now;
 
                     // Cálculo del Total por ítem
-                    decimal impuesto = item.SubtotalVenta * TASA_IMPUESTO;
-                    item.TotalVenta = item.SubtotalVenta + impuesto;
+                    //decimal impuesto = item.SubtotalVenta * TASA_IMPUESTO;
+                    item.TotalVenta = item.SubtotalVenta; //+ impuesto;
                 }
 
                 // 2. ✅ CALCULAR EL TOTAL GENERAL USANDO LINQ (sumando la propiedad TotalVenta de todos los ítems)
