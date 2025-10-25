@@ -31,6 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.exit_admin = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Reportes = new System.Windows.Forms.Button();
             this.panel_submenu = new System.Windows.Forms.Panel();
             this.subtn_adminInven = new System.Windows.Forms.Button();
             this.subtn_stock = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             this.btn_GestEmpleados = new System.Windows.Forms.Button();
             this.btn_GestProductos = new System.Windows.Forms.Button();
             this.panel_conector = new System.Windows.Forms.Panel();
-            this.btn_Reportes = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_submenu.SuspendLayout();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,6 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(11)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.btn_Reportes);
             this.panel1.Controls.Add(this.panel_submenu);
             this.panel1.Controls.Add(this.picBox_inventario);
@@ -117,6 +120,23 @@
             this.panel1.Size = new System.Drawing.Size(230, 565);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_Reportes
+            // 
+            this.btn_Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Reportes.FlatAppearance.BorderSize = 0;
+            this.btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reportes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reportes.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.btn_Reportes.Location = new System.Drawing.Point(0, 409);
+            this.btn_Reportes.Name = "btn_Reportes";
+            this.btn_Reportes.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btn_Reportes.Size = new System.Drawing.Size(230, 40);
+            this.btn_Reportes.TabIndex = 25;
+            this.btn_Reportes.Text = "Reportes de Ventas";
+            this.btn_Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Reportes.UseVisualStyleBackColor = true;
+            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
             // 
             // panel_submenu
             // 
@@ -397,22 +417,16 @@
             this.panel_conector.TabIndex = 2;
             this.panel_conector.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_conector_Paint);
             // 
-            // btn_Reportes
+            // pictureBox4
             // 
-            this.btn_Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Reportes.FlatAppearance.BorderSize = 0;
-            this.btn_Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reportes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reportes.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_Reportes.Location = new System.Drawing.Point(0, 409);
-            this.btn_Reportes.Name = "btn_Reportes";
-            this.btn_Reportes.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btn_Reportes.Size = new System.Drawing.Size(230, 40);
-            this.btn_Reportes.TabIndex = 25;
-            this.btn_Reportes.Text = "Reportes de Ventas";
-            this.btn_Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Reportes.UseVisualStyleBackColor = true;
-            this.btn_Reportes.Click += new System.EventHandler(this.btn_Reportes_Click);
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::Sistema_Ventas_Inventario_Papeleria.Properties.Resources.icono_reportes;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 409);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 26;
+            this.pictureBox4.TabStop = false;
             // 
             // MainForm
             // 
@@ -440,6 +454,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,5 +484,6 @@
         private System.Windows.Forms.Button subtn_stock;
         private System.Windows.Forms.Panel panel_submenu;
         private System.Windows.Forms.Button btn_Reportes;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
